@@ -1,12 +1,12 @@
 import socket as sk 
 from threading import Thread
 
-host = sk.gethostname()
+host = sk.gethostname() 
 port = 5000
 
-s = sk.socket(sk.AF_INET, sk.SOCK_STREAM)
+s = sk.socket(sk.AF_INET, sk.SOCK_STREAM) # using the portocol TCP for fast connection 
 s.bind((host, port))
-s.listen(5)
+s.listen(5) # five client wait for the server
 
 print("the server is ready for cleints......")
 # tell here the server is ready to run
@@ -27,7 +27,7 @@ def rescev_message(new):  # the recv function
             break
 
 while True:
-    new_socket, addr = s.accept()
+    new_socket, addr = s.accept() # the accept fuc resturns two virbls 
 
     print(f" the server has accept a clinet with IP='{addr[0]}' and the clint using port='{addr[1]}'. ")
 
