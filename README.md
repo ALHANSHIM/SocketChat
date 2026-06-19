@@ -28,3 +28,6 @@ Both scripts use threads (`threading` module) so you can receive incoming messag
    Run the server script first on the host machine:
    ```bash
    python server.py
+2. **Then the client**
+3. ```bash
+   python client.py
