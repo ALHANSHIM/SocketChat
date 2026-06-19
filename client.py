@@ -1,6 +1,6 @@
 import socket as sk 
 from threading import Thread
-host = sk.gethostname()
+host = input("Enter the serer's IP: ")
 port = 5000
 
 s = sk.socket(sk.AF_INET, sk.SOCK_STREAM)
