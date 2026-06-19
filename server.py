@@ -1,38 +1,48 @@
-import socket as sk
-from threading import Thread 
 
-host = sk.gethostname()
+import socket as sk 
+from threading import Thread
+
+host = sk.gethostname() 
 port = 5000
 
-s = sk.socket(sk.AF_INET, sk.SOCK_STREAM)
+s = sk.socket(sk.AF_INET, sk.SOCK_STREAM) # using the portocol TCP 
 s.bind((host, port))
-s.listen(5)
-print("the server is ready for clients......")
+s.listen(5) # five client wait for the server
 
-# دالة الاستقبال لكل عميل في خيط منفصل
-def rescev_message(new):
+print("the server is ready for cleints......")
+# tell here the server is ready to run
+
+def rescev_message(new):  # the recv function
     while True:
-        try:  
+        try:
             data = new.recv(1024)
             if not data:
-                print("\nthe client is disconnected")
+                print("the client is disconnected")
                 break
+
             client_message = data.decode('utf-8')
-            print(f'\nclient: {client_message}')
-            print(":>", end="", flush=True) 
+            print(f'client: {client_message}\n')
+            print(":>", end="", flush=True)
+
         except Exception:
-             break
+            break
 
 while True:
-    new_socket, addr = s.accept()
-    print(f" the server has accepted a client with IP='{addr[0]}' and port='{addr[1]}'. ")
-    code = int(input("Enter 1 to start chatting or Enter 2 to exit. "))
+    new_socket, addr = s.accept()  
+
+    print(f" the server has accept a clinet with IP='{addr[0]}' and the clint using port='{addr[1]}'. ")
+
+    code = int(input("Enter 1 to start chating or Enter 2 to exit. "))
+
     if code == 1:
         t1 = Thread(target=rescev_message, args=[new_socket])
         t1.start()
+
         while True:
-            print("Enter your message after :> then press Enter. If you want to exit just type 'exit--'")
+            print("Enter your massage after :> the press Enter. if you want to exit just type 'exit--'")
+
             server_message = input(":>")
+
             if server_message == "exit--":
                 new_socket.close()
                 break
