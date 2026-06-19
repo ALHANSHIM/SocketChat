@@ -1,33 +1,93 @@
 # SocketChat
 
-![Latest Version](https://img.shields.io/badge/version-v1.0.0--alpha-brightgreen)
-![Python](https://img.shields.io/badge/python-%3E%3D3.10-blue)
-![Topic](https://img.shields.io/badge/topic-networking-orange)
+A lightweight terminal-based chat application built with Python sockets and threading.
 
-Hey there! This is SocketChat, a simple terminal-based chat application built with Python. 
+![version](https://img.shields.io/badge/version-1.0.0--alpha-blue)
+![python](https://img.shields.io/badge/python-%3E%3D3.10-blue)
+![license](https://img.shields.io/badge/license-MIT-green)
+![topic](https://img.shields.io/badge/topic-networking-orange)
 
-### Why I built this
-I'm currently diving into Python and wanted to understand how networking works under the hood. So, I built this project to get hands-on experience with the `socket` library and learn how to handle data transfers and multiple threads. 
+## Overview
 
-### Current Status & Future Plans
-Right now, this is just a super early prototype. It’s basic, and I haven't done any deep error handling yet, so things might crash if inputs are unexpected. I'm treating this as a starting point, and I'll definitely be upgrading it, squashing bugs, and adding better features in the future as I learn more.
+SocketChat is a simple client-server chat application written in pure Python, with no external dependencies. It was built as a hands-on project to explore how networking works under the hood — handling socket connections, sending and receiving data, and managing multiple simultaneous connections using threads.
 
----
+## Why I Built This
 
-## How it works
+I'm currently learning the fundamentals of computer networking and wanted to understand how data actually moves between machines. Rather than just reading about sockets, I built this project to get practical experience with the Python `socket` library and to learn how to handle concurrent connections using the `threading` module.
 
-The project is split into two files:
-1. `server.py`: Listens for connections and handles sending/receiving messages on the server side.
-2. `client.py`: Connects to the server's IP address and allows the user to chat.
+## Features
 
-Both scripts use threads (`threading` module) so you can receive incoming messages in the background while typing your own.
+- Real-time, terminal-based messaging between a server and multiple clients
+- Built using only Python's standard library (`socket`, `threading`)
+- Simple, readable codebase — great for anyone learning network programming
+- Two-file architecture for clarity: a server and a client
 
-## How to run it
+## How It Works
 
-1. **Start the Server**
-   Run the server script first on the host machine:
-   ```bash
-   python server.py
-2. **Then the client**
-3. ```bash
-   python client.py
+The project is split into two scripts:
+
+| File | Description |
+|------|--------------|
+| `server.py` | Listens for incoming connections and handles sending/receiving messages |
+| `client.py` | Connects to the server's IP address and lets the user send/receive messages |
+
+Both scripts use the `threading` module so messages can be received in the background while the user is still able to type and send their own.
+
+## Getting Started
+
+### Requirements
+
+- Python 3.10 or higher
+- No external dependencies — uses only the standard library
+
+### Installation
+
+```bash
+git clone https://github.com/ALHANSHIM/SocketChat.git
+cd SocketChat
+```
+
+### Usage
+
+**1. Start the server** (on the host machine):
+
+```bash
+python server.py
+```
+
+**2. Start the client** (on the same or a different machine on the network):
+
+```bash
+python client.py
+```
+
+> Make sure the client is configured with the correct server IP address before connecting.
+
+## Project Status
+
+This project is an early-stage prototype. The core functionality works, but it hasn't been hardened yet — unexpected input or unusual network conditions may cause issues. It's a learning project first, and a polished tool second. Feedback and suggestions are very welcome.
+
+## Roadmap
+
+- [ ] Improve error handling for dropped or unstable connections
+- [ ] Add support for usernames and message history
+- [ ] Add encryption for message privacy
+- [ ] Write basic tests
+- [ ] Package as an installable CLI tool
+
+## Contributing
+
+Contributions, issues, and suggestions are welcome. If you'd like to help improve SocketChat:
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/your-feature`)
+3. Commit your changes
+4. Open a pull request
+
+## License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
+## Author
+
+**ALHANSHIM**
