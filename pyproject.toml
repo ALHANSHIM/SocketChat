@@ -1,0 +1,25 @@
+[project]
+name = "socketchat"
+version = "0.1.0"
+description = "LAN chat "
+requires-python = ">=3.10"
+dependencies = [
+    "textual",
+    "click",
+    "cryptography",
+    "rich",
+]
+
+
+[project.scripts]
+schat = "commands:schat"
+
+
+[tool.setuptools]
+py-modules = ["commands", "connecting", "core", "functions", "startup", "window"]
+packages = ["tui"]
+
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
