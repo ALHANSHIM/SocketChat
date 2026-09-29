@@ -22,7 +22,10 @@
 
 
 
-https://github.com/user-attachments/assets/bcd64317-a332-4557-959f-014ec942bf2d
+
+
+https://github.com/user-attachments/assets/a204c379-d788-48ad-9f43-95625f036d8c
+
 
 
 <hr style="height:1px; border:none; background-color:#555;">
@@ -74,15 +77,11 @@ git clone https://github.com/ALHANSHIM/SocketChat.git
 cd SocketChat
 ```
 
-**2. Install required libraries**
-```bash
-pip install -r requirements.txt
-```
-
-**3. Install the `schat` command**
+**2. Install  requirements & command**
 ```bash
 pip install -e .
 ```
+
 
 That's it. From anywhere just type:
 ```bash
