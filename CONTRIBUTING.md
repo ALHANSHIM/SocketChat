@@ -8,9 +8,7 @@ Thanks for visiting. I created SocketChat as a simple terminal chat for a single
 git clone https://github.com/ALHANSHIM/SocketChat.git
 cd SocketChat
 ```
-```bash
-pip install -r requirements.txt
-```
+
 ```bash
 pip install -e .
 ```
