@@ -2,15 +2,15 @@
 import time
 from textual.app import App
 from textual.binding import Binding
-from tui.auto_loading import ConfirmDialog
-from tui.chat import ChatScreen
-from tui.ip_loading import IpLoadingScreen
-from tui.welcome_page import WelcomeScreen
+from socketchat.tui.auto_loading import ConfirmDialog
+from socketchat.tui.chat import ChatScreen
+from socketchat.tui.ip_loading import IpLoadingScreen
+from socketchat.tui.welcome_page import WelcomeScreen
 from threading import Thread, Event
 from queue import Queue
-from functions import route
-from core import runs_hearing
-from startup import P2_sender
+from socketchat.functions import route
+from socketchat.core import runs_hearing
+from socketchat.startup import P2_sender
 class SocketChatApp(App):
     TITLE = "SocketChat"
     MIN_SIZE = (60, 24)

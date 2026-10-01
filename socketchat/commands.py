@@ -1,6 +1,5 @@
 import click
-from window import run_app
-
+from socketchat.window import run_app
 
 @click.command()
 def schat():

@@ -4,9 +4,9 @@ from textual.binding import Binding
 from textual.containers import Center, Horizontal
 from textual.screen import Screen
 from textual.widgets import Static, Label, Input
-from tui.auto_loading import AutoLoadingScreen
-from tui.ip_loading import IpLoadingScreen
-from core import parse_command
+from socketchat.tui.auto_loading import AutoLoadingScreen
+from socketchat.tui.ip_loading import IpLoadingScreen
+from socketchat.core import parse_command
 
 
 BRAND_BG     = "#0B0C0A"

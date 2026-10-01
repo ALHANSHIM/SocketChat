@@ -1,6 +1,6 @@
 from threading import Thread, Event
 from queue import Queue, Empty
-from startup import auto_listener
+from socketchat.startup import auto_listener
 
 
 

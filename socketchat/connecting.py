@@ -2,7 +2,7 @@ import socket as sk
 import time
 from threading import Thread, Event
 from queue import Queue, Empty
-from startup import P2_sender
+from socketchat.startup import P2_sender
 
 
 

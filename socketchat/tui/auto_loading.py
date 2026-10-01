@@ -7,9 +7,9 @@ from textual.containers import Center, Horizontal, Vertical, VerticalScroll
 from textual.screen import ModalScreen, Screen
 from textual.widgets import Button, Static
 from queue import Queue, Empty
-from startup import discover, my_ip
-from tui.chat import ChatScreen
-from tui.loading import LoadingRing
+from socketchat.startup import discover, my_ip
+from socketchat.tui.chat import ChatScreen
+from socketchat.tui.loading import LoadingRing
 
 BRAND_BG      = "#0B0C0A"   
 BRAND_GREEN   = "#02462E"    

@@ -12,12 +12,11 @@ dependencies = [
 
 
 [project.scripts]
-schat = "commands:schat"
+schat = "socketchat.commands:schat"
 
 
 [tool.setuptools]
-py-modules = ["commands", "connecting", "core", "functions", "startup", "window"]
-packages = ["tui"]
+packages = ["socketchat", "socketchat.tui"]
 
 
 [build-system]

@@ -8,9 +8,9 @@ from textual.containers import Center, Vertical
 from textual.screen import Screen
 from textual.widgets import Static
 
-from connecting import start_ip_connecting
-from tui.chat import ChatScreen
-from tui.loading import LoadingRing
+from socketchat.connecting import start_ip_connecting
+from socketchat.tui.chat import ChatScreen
+from socketchat.tui.loading import LoadingRing
 
 
 BRAND_BG      = "#0B0C0A"
